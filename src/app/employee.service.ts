@@ -17,4 +17,9 @@ export class EmployeeService
         return this.getEmployees()
                     .then(employee => employee.find(employee => employee.id === id));
     }
+
+     searchEmployees(term : string) : Promise<Employee[]>{
+         return this.getEmployees()
+         .then(employee => employee);
+     }
 }

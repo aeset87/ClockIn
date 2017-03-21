@@ -1,3 +1,9 @@
 
-
-
+    <header>
+        <h1>Employee List</h1>
+    </header>
+    <div class="grid grid-pad">
+  <a *ngFor="let employee of employees"  [routerLink]="['/detail', employee.id]"  class="col-1-4">
+    <div class="module hero">
+      <h4>{{employee.first_name}} {{employee.last_name}}</h4>
+    </div>

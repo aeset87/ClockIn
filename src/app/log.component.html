@@ -1,0 +1,25 @@
+ <header>
+        <h1>Employee Log</h1>
+</header>
+<table style="width:100%">
+        <tr>
+            <th>Id</th>
+            <th>First Name</th> 
+            <th>Last Name</th>
+            <th>Starting hours</th>
+            <th>Ending hours</th>
+            <th>Away time</th>
+            <th>Away reason</th>
+            <th>Working hours</th>
+        </tr>
+        <tr *ngFor="let employeelog of employeeslog">
+            <th>{{employeelog.id}}</th>
+            <th>{{employeelog.id}}</th>
+            <th>{{employeelog.id}}</th>
+            <th>{{employeelog.start}}</th>
+            <th>{{employeelog.end}}</th>
+            <th>{{employeelog.away_hours}}</th>
+            <th>{{employeelog.away_reason}}</th>
+            <th>{{employeelog.working_hours}}</th>
+        </tr>
+</table>

@@ -38,5 +38,10 @@ export class EmployeeComponent implements OnInit
   {
       this.router.navigate(['/detail', this.selectedEmployee.id]);
   }
+
+  searchEmployees(term: string) :void
+  {
+      this.employeeService.searchEmployees("brus").then(employees => employees);
+  }
 }
 

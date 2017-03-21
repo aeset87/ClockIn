@@ -13,6 +13,7 @@ import { EmployeeService } from './employee.service';
 import { EmployeeComponent } from './employee.component';
 import { HomeComponent } from './home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { LogComponent } from './log.component';
 
 @NgModule
 ({
@@ -28,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
       AppComponent,
       EmployeeDetailComponent,
       EmployeeComponent,
-      HomeComponent
+      HomeComponent,
+      LogComponent
     ],
     providers: 
     [
