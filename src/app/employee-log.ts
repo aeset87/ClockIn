@@ -1,5 +1,3 @@
-import { AwayReason } from './away-reason';
-
 export class EmployeeLog 
 {
   id: number;
@@ -8,6 +6,6 @@ export class EmployeeLog
   start: string;
   end: string;
   away_hours: number;
-  away_reason: AwayReason;
+  away_reason: string;
   working_hours: number;
 }
