@@ -1,0 +1,13 @@
+<div *ngIf="employee">
+    <h2>{{employee.first_name}} {{employee.last_name}} details!</h2>
+    <div><label>id: </label>{{employee.id}}</div>
+    <div>
+      <label>First name: </label>
+      <input [(ngModel)]="employee.first_name" placeholder="Input first name..."/>
+    </div>
+    <div>
+      <label>Last name: </label>
+      <input [(ngModel)]="employee.last_name" placeholder="Input last name..."/>
+    </div>
+    <button (click)="goBack()">Back</button>
+</div>
