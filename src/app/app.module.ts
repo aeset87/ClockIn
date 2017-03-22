@@ -18,14 +18,14 @@ import { VacationComponent } from './vacation.component';
 
 @NgModule
 ({
-   imports: 
+   imports:
     [
       BrowserModule,
       FormsModule,
       HttpModule,
       AppRoutingModule
      ],
-    declarations: 
+    declarations:
     [
       AppComponent,
       EmployeeDetailComponent,
@@ -34,7 +34,7 @@ import { VacationComponent } from './vacation.component';
       LogComponent,
       VacationComponent
     ],
-    providers: 
+    providers:
     [
       EmployeeService
     ],

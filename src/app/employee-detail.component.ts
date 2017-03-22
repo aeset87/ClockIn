@@ -18,16 +18,20 @@ export class EmployeeDetailComponent implements OnInit
 
     constructor(private employeeService: EmployeeService, private route: ActivatedRoute, private location: Location) {}
 
-    ngOnInit(): void 
+    ngOnInit(): void
     {
         this.route.params
             .switchMap((params: Params) => this.employeeService.getEmployee(+params['id']))
             .subscribe(employee => this.employee = employee);
     }
 
-    goBack(): void 
+    goBack(): void
     {
         this.location.back();
     }
-}
 
+    save(): void
+    {
+        this.employeeService.saveEmployee(this.employee);
+    }
+}

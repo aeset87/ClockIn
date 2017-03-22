@@ -11,9 +11,9 @@ import { EmployeeService } from './employee.service';
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
-export class EmployeeComponent implements OnInit 
+export class EmployeeComponent implements OnInit
 {
-  employees = EMPLOYEES;
+  employees = [];
   selectedEmployee: Employee;
 
   onSelect(employee: Employee): void
@@ -23,18 +23,23 @@ export class EmployeeComponent implements OnInit
 
   constructor(private employeeService: EmployeeService, private router: Router) {}
 
-  getEmployees(): void 
+  getEmployees(): void
   {
-      this.employeeService.getEmployees().then(employees => employees);
-      
+      this.employeeService.getAllEmployees().subscribe(employees => {
+        this.employees = employees;
+        console.log(this.employees);
+      });
+
+      //this.employeeService.getEmployees().then(employees => employees);
+
   }
 
-  ngOnInit(): void 
+  ngOnInit(): void
   {
       this.getEmployees();
   }
 
-  gotoDetail(): void 
+  gotoDetail(): void
   {
       this.router.navigate(['/detail', this.selectedEmployee.id]);
   }
@@ -44,4 +49,3 @@ export class EmployeeComponent implements OnInit
       this.employeeService.searchEmployees("brus").then(employees => employees);
   }
 }
-
